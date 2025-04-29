@@ -10,7 +10,6 @@ body {
     align-items: center;
     height: 100vh;
     background-color: #D84242;
-    color: white;
 }
 
 .content,
@@ -27,9 +26,11 @@ body {
     flex-direction: row;
 }
 
-a {
+a,button {
     text-decoration: none;
+    background: transparent;
     color: white;
+    cursor: pointer;
     font-size: 18px;
     font-family: monospace;
     border: 2px solid white;
@@ -38,13 +39,16 @@ a {
     border-radius: 14px;
 }
 
-a:hover {
+a:hover,button:hover {
     background: white;
     color: #D84242;
     text-decoration: underline;
 }
 
-video {
+#content_Main {
     margin-bottom: 50px;
-    display: none;
+}
+
+video {
+    width: 500px;
 }

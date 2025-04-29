@@ -15,21 +15,22 @@
             <img src="Assets/logo.png" alt="">
         </div>
         <div class="allLinks">
-            <a href="Assets/Report.docx">View Report</a>
-            <a href="Assets/Storyboard.docx">View Story Board</a>
-            <a id="vd" onclick="openvd()" href="#">Video</a>
+            <a href="Assets/Report.pdf" target="_blank">View Report</a>
+            <a href="Assets/Storyboard.pdf" target="_blank">View Story Board</a>
+            <button onclick="openDoc('video')">Video</button>
             <a href="https://www.figma.com/proto/TKkcqPXOXR9N2nFyjlUtzc/DS?node-id=11-18&t=m5NJ7jcHICaDIkVD-1&scaling=min-zoom&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=11%3A18"
                 target="_blank">Prototype</a>
         </div>
-
-        <video id="video" style="width: 60%;" controls autoplay></video>
+        <div id="main_content">
+        </div>
     </div>
 
 
     <script>
-        const openvd = () => {
-            document.getElementById('video').style.display = "block";
-            document.getElementById('video').setAttribute('src',"https://res.cloudinary.com/dvo8ftbqu/video/upload/v1745638333/crop_hrpohr.mp4")
+        const main_content = document.getElementById('main_content');
+        function openDoc() {
+            document.body.style.alignItems = "baseline";
+            main_content.innerHTML = `<video src="https://res.cloudinary.com/dvo8ftbqu/video/upload/v1745638333/crop_hrpohr.mp4" controls></video>`;
         }
     </script>
 </body>
